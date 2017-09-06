@@ -24,15 +24,15 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author jerson.lopez
  */
 @Entity
-@Table(name = "accont")
+@Table(name = "account")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Accont.findAll", query = "SELECT a FROM Accont a")
-    , @NamedQuery(name = "Accont.findById", query = "SELECT a FROM Accont a WHERE a.id = :id")
-    , @NamedQuery(name = "Accont.findByUsername", query = "SELECT a FROM Accont a WHERE a.username = :username")
-    , @NamedQuery(name = "Accont.findByPassword", query = "SELECT a FROM Accont a WHERE a.password = :password")
-    , @NamedQuery(name = "Accont.findByEmail", query = "SELECT a FROM Accont a WHERE a.email = :email")})
-public class Accont implements Serializable {
+    @NamedQuery(name = "Account.findAll", query = "SELECT a FROM Account a")
+    , @NamedQuery(name = "Account.findById", query = "SELECT a FROM Account a WHERE a.id = :id")
+    , @NamedQuery(name = "Account.findByUsername", query = "SELECT a FROM Account a WHERE a.username = :username")
+    , @NamedQuery(name = "Account.findByPassword", query = "SELECT a FROM Account a WHERE a.password = :password")
+    , @NamedQuery(name = "Account.findByEmail", query = "SELECT a FROM Account a WHERE a.email = :email")})
+public class Account implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -57,14 +57,14 @@ public class Accont implements Serializable {
     @Column(name = "email")
     private String email;
 
-    public Accont() {
+    public Account() {
     }
 
-    public Accont(Integer id) {
+    public Account(Integer id) {
         this.id = id;
     }
 
-    public Accont(Integer id, String username, String password, String email) {
+    public Account(Integer id, String username, String password, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -113,10 +113,10 @@ public class Accont implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Accont)) {
+        if (!(object instanceof Account)) {
             return false;
         }
-        Accont other = (Accont) object;
+        Account other = (Account) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -125,7 +125,7 @@ public class Accont implements Serializable {
 
     @Override
     public String toString() {
-        return "com.udea.modelo.Accont[ id=" + id + " ]";
+        return "com.udea.modelo.Account[ id=" + id + " ]";
     }
     
 }

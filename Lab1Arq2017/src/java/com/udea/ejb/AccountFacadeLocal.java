@@ -5,7 +5,7 @@
  */
 package com.udea.ejb;
 
-import com.udea.modelo.Accont;
+import com.udea.modelo.Account;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,19 +14,19 @@ import javax.ejb.Local;
  * @author lis
  */
 @Local
-public interface AccontFacadeLocal {
+public interface AccountFacadeLocal {
 
-    void create(Accont accont);
+    void create(Account accont);
 
-    void edit(Accont accont);
+    void edit(Account accont);
 
-    void remove(Accont accont);
+    void remove(Account accont);
 
-    Accont find(Object id);
+    Account find(Object id);
 
-    List<Accont> findAll();
+    List<Account> findAll();
 
-    List<Accont> findRange(int[] range);
+    List<Account> findRange(int[] range);
 
     int count();
 

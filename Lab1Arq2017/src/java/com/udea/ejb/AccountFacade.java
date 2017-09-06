@@ -5,7 +5,7 @@
  */
 package com.udea.ejb;
 
-import com.udea.modelo.Accont;
+import com.udea.modelo.Account;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,7 +16,7 @@ import javax.persistence.Query;
  * @author lis
  */
 @Stateless
-public class AccontFacade extends AbstractFacade<Accont> implements AccontFacadeLocal {
+public class AccountFacade extends AbstractFacade<Account> implements AccountFacadeLocal {
 
     @PersistenceContext(unitName = "Lab1Arq2017PU")
     private EntityManager em;
@@ -26,13 +26,13 @@ public class AccontFacade extends AbstractFacade<Accont> implements AccontFacade
         return em;
     }
 
-    public AccontFacade() {
-        super(Accont.class);
+    public AccountFacade() {
+        super(Account.class);
     }
 
     @Override
     public boolean checkLogin(String u, String p) {
-        Query q = em.createQuery("select a from Accont a where a.username=:u and a.password=:p");
+        Query q = em.createQuery("select a from Account a where a.username=:u and a.password=:p");
         q.setParameter("u",u);
         q.setParameter("p", p);
         return q.getResultList().size()>0;
