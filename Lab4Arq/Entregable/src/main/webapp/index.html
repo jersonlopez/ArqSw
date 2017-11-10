@@ -13,8 +13,8 @@
           <table>
             <tr>
                 <td>
-                    <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
-                </td>     
+                    <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;"></canvas>
+                </td>
                 <td>
                     <form name="inputForm">
                         <table>
@@ -23,6 +23,7 @@
                                 <th>Color</th>
                                 <td><input type="radio" name="color" value="#FF0000">Red</td>
                                 <td><input type="radio" name="color" value="#0000FF">Blue</td>
+                                
                                 <td><input type="radio" name="color" value="#FF9900">Orange</td>
                                 <td><input type="radio" name="color" value="#33CC33" checked="true">Green</td>
                             </tr>
@@ -33,8 +34,9 @@
                             
                             <tr>
                                 <td></td>
-                                <td><button id="clear"> Limpiar </button></td>
-                                <td><button id="save"> Guardar </button></td>
+                                <td><button class="btn btn-success" id="clear"> Limpiar </button></td>
+                                <td></td>
+                                <td><button class="btn btn-success" id="save"> Guardar </button></td>
                             </tr>
                             
 
@@ -47,6 +49,5 @@
         </table>
         <script type="text/javascript" src="websocket.js"></script>
          <script type="text/javascript" src="tablero.js"></script>
-         <script type="text/javascript" src="limpiar.js"></script>
     </body>
 </html>

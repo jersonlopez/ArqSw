@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-var canvas = document.getElementById("myCanvas");
-var context = canvas.getContext("2d");
+let canvas = document.getElementById("myCanvas");
+let context = canvas.getContext("2d");
 let clear = document.getElementById("clear");
 let save = document.getElementById("save");
 
@@ -33,7 +33,7 @@ function finish(evt) {
     canvas.removeEventListener("mousemove", defineImage, true);
 }
 
-//pintar en el canvan
+//obtencion de coordenadas a pintar
 function defineImage(evt) {
     let currentPos = getCurrentPos(evt);
 
@@ -47,7 +47,7 @@ function defineImage(evt) {
 
     let json = JSON.stringify({
         "color": color.value,
-        "size":3,
+        "size":6,
         "coords": {
             "x": currentPos.x,
             "y": currentPos.y
@@ -58,6 +58,8 @@ function defineImage(evt) {
     
 }
 
+
+//pintar lineas
 function drawImageText(image) {
   console.log("drawImageText");
     var json = JSON.parse(image);
@@ -71,8 +73,9 @@ function drawImageText(image) {
     
 }
 
+//guardar canvan
 function saveC(evt) {
-    let MIME_TYPE = "image/png";
+    let MIME_TYPE = "image/jpeg";
 
     let imgURL = canvas.toDataURL(MIME_TYPE);
     let dlLink = document.createElement('a');
@@ -86,15 +89,10 @@ function saveC(evt) {
     document.body.removeChild(dlLink);
 }
 
+//limpiar canvan
 function clearC(evt) {
-    var json = JSON.stringify({
-        "color": '#FFFFFF',
-        "size" : 5000, 
-        "coords": {
-            "x": 20,
-            "y": 20
-        }
-    });
-    drawImageText(json);
-    sendText(json);
+    
+  context.clear();
+  context.setTransform(-1, 0, 0, 1, canvas.width, canvas.height);
+  context.clear(true);
 }

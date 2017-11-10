@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PaintBoard</title>
+        <title>Lab4</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     </head>
      <body>
-        <h1>Tablero Colaborativo</h1>
+        <h1>Collaboration Board</h1>
       
           <table>
             <tr>
@@ -22,8 +22,7 @@
                             <tr>
                                 <th>Color</th>
                                 <td><input type="radio" name="color" value="#FF0000">Red</td>
-                                <td><input type="radio" name="color" value="#0000FF">Blue</td>
-                                
+                                <td><input type="radio" name="color" value="#0000FF">Blue</td>                                
                                 <td><input type="radio" name="color" value="#FF9900">Orange</td>
                                 <td><input type="radio" name="color" value="#33CC33" checked="true">Green</td>
                             </tr>
@@ -34,9 +33,9 @@
                             
                             <tr>
                                 <td></td>
-                                <td><button class="btn btn-success" id="clear"> Limpiar </button></td>
+                                <td><button class="btn btn-success" id="clear"> Refresh </button></td>
                                 <td></td>
-                                <td><button class="btn btn-success" id="save"> Guardar </button></td>
+                                <td><button class="btn btn-success" id="save"> Save </button></td>
                             </tr>
                             
 
@@ -48,6 +47,7 @@
             </tr>
         </table>
         <script type="text/javascript" src="websocket.js"></script>
-         <script type="text/javascript" src="tablero.js"></script>
+         <script type="text/javascript" src="board.js"></script>
     </body>
 </html>
+

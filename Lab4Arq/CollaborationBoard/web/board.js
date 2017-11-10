@@ -96,3 +96,4 @@ function clearC(evt) {
   context.setTransform(-1, 0, 0, 1, canvas.width, canvas.height);
   context.clear(true);
 }
+
