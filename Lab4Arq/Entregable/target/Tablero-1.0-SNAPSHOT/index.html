@@ -11,7 +11,7 @@
             <tr>
                 <td>
                     <canvas id="myCanvas" width="150" height="150" style="border:1px solid #000000;"></canvas>
-                </td>
+                </td>     
                 <td>
                     <form name="inputForm">
                         <table>
@@ -32,15 +32,25 @@
                                 <td> </td>
                             </tr>
                             
+                            <tr>
+                                <td></td>
+                                <td><a id="download" download="image.png"><button type="button" onClick="save()">Guardar</button></a></td>
+                                <td><button onclick="onload()"> Limpiar </button></td>
+                            </tr>
+                            
 
                         </table>
 
 
                     </form>
                 </td>
+                <td>
+                    <img src="https://www.mundoperro.net/wp-content/uploads/cuanto-medira-mi-perro-mestizo-150x150.jpg" id="img" width="150" height="150" alt="espere por favor "/>
+                </td>
             </tr>
         </table>
         <script type="text/javascript" src="websocket.js"></script>
          <script type="text/javascript" src="tablero.js"></script>
+         <script type="text/javascript" src="limpiar.js"></script>
     </body>
 </html>
