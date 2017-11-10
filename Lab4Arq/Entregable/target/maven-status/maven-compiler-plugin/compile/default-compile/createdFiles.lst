@@ -1,1 +1,5 @@
+com/udea/tablero/FiguraEncoder.class
 com/udea/tablero/Tablero.class
+com/udea/tablero/Figura.class
+com/udea/tablero/FiguraDecoder.class
+com/udea/tablero/Coordenadas.class
