@@ -1,0 +1,11 @@
+languaje: java
+branches: 
+    only: 
+        master
+notifications:
+    email:
+        recipients:
+            jersonlopez.1204@gmail.com
+jdk: oraclejdk8
+script: mvn clean install
+        
