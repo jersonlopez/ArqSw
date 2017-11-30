@@ -1,0 +1,26 @@
+## YAML Template.
+---
+spring:
+    application:
+        name: microservice-cliente
+    freemarker:
+        enable: false
+    thymeleaf: 
+        cache: false
+        prefix: classpath:/templates/
+
+error:
+    path=/error
+    
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka/
+            
+server: 
+    port: 6666
+    
+    
+    
+    
+    
